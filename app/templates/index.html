@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</head>
+<body>
+
+    <h1> Landing Page </h1>
+
+    <form action="{% url 'datasave' %}" method="post">
+        {% csrf_token %}
+        <div>
+
+            <label for=""> Name  </label>
+            <input type="text" name="nm" id=""  >      
+        </div>
+
+        <div>
+            <label for=""> Email  </label>
+            <input type="email" name="em" id=""  >      
+        </div>
+
+        <div>
+            <label for=""> Gender </label>
+            <input type="radio" name="gender" id="" value="Male" > Male       
+            <input type="radio" name="gender" id="" value="Female" > Female       
+        </div>
+
+        <div>
+            <label for=""> Class  </label>
+            <select name="class" id="">
+
+                <option value="10"> 10th </option>
+                <option value="11"> 11th </option>
+                <option value="12"> 12th </option>
+                <option value="13"> 13th </option>
+                <option value="14"> 14th </option>
+                <option value="15"> 15th </option>
+            
+            </select>    
+        </div>
+
+        
+        <div>
+            <label for=""> City  </label>
+            <input type="text" name="ct" id="" >     
+        </div>
+
+        
+        <div>
+            <label for=""> Course  </label>
+            <input type="text" name="course" id=""  >      
+        </div>
+
+        
+        <div>
+            <label for=""> Fess </label>
+            <input type="text" name="fess" id=""  >      
+        </div>
+
+        <div>
+            <button> Save </button>
+        </div>
+
+    </form>
+
+</body>
+</html>
